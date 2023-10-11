@@ -1,0 +1,123 @@
+body {
+  background-color: #8fa486;
+  color: #003736;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  box-shadow: #1f4821 7px 8px 15px;
+  margin: 25px;
+  background-color: #c6dbbe;
+  place-content: center;
+}
+
+article {
+  margin: 20px;
+  border: 1px solid black;
+}
+
+article > :nth-child(even) {
+  background-color: #c6dbbe;
+}
+
+.div {
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+h2 {
+  padding: 0;
+  font-size: 110%;
+  margin: 0;
+}
+.pets article > * {
+  padding: 10px;
+}
+.pet p {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 110%;
+  padding-bottom: 0px;
+}
+
+/*-------------bubble---------------*/
+.range-wrap {
+  width: 220px;
+  position: relative;
+}
+.range {
+  width: 100%;
+}
+.bubble {
+  background: #003736;
+  color: #c6dbbe;
+  padding: 2px 8px;
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #003736;
+  top: -4px;
+  left: 50%;
+}
+
+/*---------------form-style------------*/
+
+form {
+  display: grid;
+  width: 400px;
+  margin: 25px;
+  background-color: #c6dbbe;
+  box-shadow: #1f4821 7px 8px 15px;
+  /* place-items: center; */
+}
+
+p#traits {
+  margin: 0;
+  font-size: 70%;
+  width: 220px;
+}
+
+form > * {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+label,
+.label,
+.range-wrap {
+  margin-top: 15px;
+}
+
+input {
+  width: 220px;
+}
+
+input#alive,
+input#dead {
+  width: auto;
+}
+
+#flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 100px;
+  place-self: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+}

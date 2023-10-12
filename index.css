@@ -1,3 +1,8 @@
+:root {
+  --x: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text font-size='90' y='1em'>❌</text></svg>") right 3px top 50% / auto 80% no-repeat;
+  --v: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text font-size='90' y='1em'>✅</text></svg>") right 3px top 50% / auto 80% no-repeat;
+}
+
 body {
   background-color: #8fa486;
   color: #003736;
@@ -37,7 +42,7 @@ h2 {
   margin: 0;
 }
 .pets article > * {
-  padding: 10px;
+  padding: 8px 20px 0 20px;
 }
 .pet p {
   margin: 0;
@@ -76,6 +81,8 @@ h2 {
 /*---------------form-style------------*/
 
 form {
+  accent-color: #19894d;
+  gap: 1rem;
   display: grid;
   width: 400px;
   margin: 25px;
@@ -102,6 +109,9 @@ label,
 
 input {
   width: 220px;
+  background-color: #e9f8e3;
+  border-radius: 4px;
+  border: 0;
 }
 
 input#alive,
@@ -117,7 +127,55 @@ input#dead {
 button {
   width: 100px;
   place-self: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
+  background-color: #19894d;
+  box-shadow: #1f4821 1px 1px 3px;
+  border: none;
+  cursor: pointer;
+  color: #e9f8e3;
+  font-size: 90%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.actions {
+  padding: 0;
+}
+
+.add_trait {
+  padding: 2px;
+  width: 20px;
+  cursor: pointer;
+  display: inline;
+  margin: 0;
+  margin-top: 4px;
+}
+
+input:focus {
+  outline: rgb(44, 44, 255) 2px solid;
+}
+
+input:required:not(:focus, :placeholder-shown) {
+  border-color: red;
+  background: var(--x);
+}
+
+input:valid:required {
+  border-color: green;
+  background: var(--v);
+}
+
+input:valid:not(:focus, :placeholder-shown) {
+  border-color: green;
+  background: var(--v);
+}
+
+#birth:valid {
+  background: none;
+  background-color: #e9f8e3;
 }

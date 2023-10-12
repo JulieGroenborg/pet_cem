@@ -20,7 +20,7 @@ export async function getPets() {
 export async function addPet() {
   let headersList = {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmZGZ3YXVmeXR3ZHVyb3BuZHl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4NDY3NzMsImV4cCI6MjAxMjQyMjc3M30.cX_qLqrbHMXj2dbzqfm88QbNPlMAXYOy8OQkNapHWG8",
-    prefer: "return=presentation",
+    Prefer: "return=representation",
     "Content-Type": "application/json",
   };
 
@@ -41,7 +41,7 @@ export async function addPet() {
 export async function deletePet(id) {
   let headersList = {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmZGZ3YXVmeXR3ZHVyb3BuZHl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4NDY3NzMsImV4cCI6MjAxMjQyMjc3M30.cX_qLqrbHMXj2dbzqfm88QbNPlMAXYOy8OQkNapHWG8",
-    prefer: "return=presentation",
+    Prefer: "return=representation",
   };
 
   let response = await fetch("https://pfdfwaufytwduropndyt.supabase.co/rest/v1/pets?id=eq." + id, {
@@ -58,7 +58,7 @@ export async function deletePet(id) {
 export async function updatePet(id) {
   let headersList = {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmZGZ3YXVmeXR3ZHVyb3BuZHl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4NDY3NzMsImV4cCI6MjAxMjQyMjc3M30.cX_qLqrbHMXj2dbzqfm88QbNPlMAXYOy8OQkNapHWG8",
-    prefer: "return=presentation",
+    Prefer: "return=representation",
     "Content-Type": "application/json",
   };
 

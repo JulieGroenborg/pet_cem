@@ -11,24 +11,26 @@
       <form action="">
         <h1>Add pet</h1>
         <fieldset>
-          <label for="species">Which species is your pet?*</label>
-          <input name="species" id="species" type="text" required />
+          <label for="pet-species" name="species">Which species is your pet?</label>
+          <input name="species" id="pet-species" type="text" placeholder="Rabbit" required />
 
-          <label for="name">What's the name of the pet?*</label>
-          <input name="name" id="name" type="name" required />
+          <label for="pet-name" name="name">What's the name of the pet?</label>
+          <input name="name" id="pet-name" type="name" placeholder="Muffy" required />
 
-          <label for="breed">What breed is your pet?</label>
-          <input name="breed" id="breed" type="text" />
+          <label for="pet-breed">What breed is your pet?</label>
+          <input name="breed" id="pet-breed" placeholder="Dwarf ram" type="text" />
 
           <div class="label">
-            <label for="traits">What traits does your pet have?</label>
+            <label for="pet-traits" name="pet_traits">What traits does your pet have?</label>
             <p id="traits">When you've written the first trait, you can click on the plus symbol to add more traits</p>
-            <input aria-describedby="traits" id="traits" type="text" />
+            <input class="pet-traits" type="text" name="pet_traits" placeholder="" />
+            <div class="add_input_here"></div>
+            <button type="button" class="add_trait">+</button>
           </div>
         </fieldset>
         <fieldset>
           <label for="birth">When was your pet born?</label>
-          <input name="birth" id="birth" type="date" />
+          <input name="birth" id="birth" type="date" placeholder="" />
 
           <div class="range-wrap">
             <label for="energy">Your pet's energy level</label>
@@ -46,6 +48,7 @@
         </fieldset>
         <button>Submit</button>
       </form>
+
       <section class="pets"></section>
     </main>
     <template>
@@ -93,6 +96,7 @@
         </div>
       </article>
     </template>
+    <template class="template2"><input class="pet-traits" type="text" name="pet_traits" placeholder="" /></template>
     <script type="module" src="index.js"></script>
   </body>
 </html>

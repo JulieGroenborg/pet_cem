@@ -65,3 +65,30 @@ function setBubble(range, bubble) {
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
+
+/*---------------------------------add another trait-input-------------*/
+
+document.querySelector(".add_trait").addEventListener("click", addInput);
+
+function addInput() {
+  console.log("der klikkes");
+
+  const template2 = document.querySelector(".template2").content;
+  const copy2 = template2.cloneNode(true);
+  //ændre indhold
+  // copy.querySelector(".p1").textContent = pet.species;
+  // copy.querySelector(".p2").textContent = pet.name;
+  // if (pet.isAlive === true) {
+  //   copy.querySelector(".p3").textContent = "Yes";
+  // } else if (pet.isAlive === false) {
+  //   copy.querySelector(".p3").textContent = "Nej";
+  // }
+  // copy.querySelector(".p4").textContent = pet.dob;
+  // copy.querySelector(".p5").textContent = pet.activityLevel;
+  // copy.querySelector(".p6").textContent = pet.traits;
+  // copy.querySelector(".p7").textContent = pet.image;
+  // copy.querySelector(".p8").textContent = pet.id;
+  // copy.querySelector(".p9").textContent = pet.race;
+
+  document.querySelector(".add_input_here").appendChild(copy2);
+}
